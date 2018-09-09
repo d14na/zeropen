@@ -1,0 +1,41 @@
+{
+ "address": "1oPEN2LTV1JpDHtG9WmN6gbUqx6BnXGKk",
+ "address_index": 14886911,
+ "background-color": "#FFF",
+ "description": "Zeronet's Private Enterprise Network provides HODLREs with the highest bandwidth over a military-grade communications network.",
+ "favicon": "images/favicon.png",
+ "files": {
+  "LICENSE": {
+   "sha512": "772987556efbdb6ceba6af1b23597c76f2db3bf5d1a0b74f158046134954db0e",
+   "size": 1062
+  },
+  "README.md": {
+   "sha512": "8a5940eafb542f7aadbe3fbab1e9dc00c1e999299fb0225929613b742ec17ad8",
+   "size": 44
+  },
+  "images/favicon.png": {
+   "sha512": "31d91d77cec702ca4ab29b571616181782e4cea8d5287a70049f0ca845bac35c",
+   "size": 1148
+  },
+  "images/icon.png": {
+   "sha512": "d082aeda01b9dc18c3203542c477d6e9bd1f8391e029c0f1a838d533db8324ce",
+   "size": 17964
+  },
+  "index.html": {
+   "sha512": "7ef4891e2afbfc406db5a7c402037e8db221078b9397bffac3db8e34e92e74d3",
+   "size": 14280
+  }
+ },
+ "ignore": "(\\.git)",
+ "inner_path": "content.json",
+ "modified": 1536454746,
+ "postmessage_nonce_security": true,
+ "signers_sign": "G+6KMpK2hAy80o+V3eR0hktgHLncjQpYpJdAklMCdbeUb7I/y/SD97gojZ9EG/8xr9QcWUGi47HV5whIPWn8+Cc=",
+ "signs": {
+  "1oPEN2LTV1JpDHtG9WmN6gbUqx6BnXGKk": "HDP5Wz3/kQs0lt2WRGJT7CD+xksDveuhRsfFDVaj9rtlHuS81nRh6Lra2THS+jQUGHDVLAZMIn6ORQby4wp77Js="
+ },
+ "signs_required": 1,
+ "title": "0PEN",
+ "translate": ["js/all.js"],
+ "zeronet_version": "0.6.3"
+}

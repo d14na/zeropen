@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>Zer0PEN</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+    .container {
+        max-width: 960px;
+    }
+
+    .discount {
+        font-size: 0.8em;
+        color: #c33;
+        margin-top: -12px;
+        margin-bottom: -3px;
+    }
+
+    /* @media (min-width: 576px) {
+        .card-columns {
+            column-count: 2;
+        }
+    } */
+    </style>
+</head>
+
+<body class="bg-light">
+
+<div class="container" id="app">
+    <div class="col-md-8 offset-md-2">
+        <div class="mt-5 text-center">
+            <img class="d-block mx-auto mb-4" src="images/icon.png" alt="" width="256" height="256">
+
+            <h1>0̸PEN</h1>
+            <h3>{{ tagLine }}</h3>
+
+            <p class="lead">
+                <br /><strong>Provides users with <span class="text-info">UNRESTRICTED</span> access to the highest bandwidth imaginable over a globally distributed, <span class="text-info">NSA/GCHQ tamper-proof</span> communications network.</strong>
+            </p>
+        </div>
+    </div>
+
+    <hr class="my-5 col-md-10 offset-md-1">
+
+    <div class="col-md-10 offset-md-1">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal text-warning">HODLRE</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                    <div class="discount">Requires 1 - 100 0̸GOLD</div>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-warning">HODL Zer0̸Gold</button>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Monthly</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$6.95 <small class="text-muted">/ mo</small></h1>
+                    <hr />
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Subscribe Now!</button>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Yearly</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$3.33 <small class="text-muted">/ mo</small></h1>
+                    <div class="discount"><span style="text-decoration: line-through">$83.40</span> $39.95 per year</div>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li></li>
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Subscribe Now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5 col-md-10 offset-md-1">
+
+    <div class="col-md-8 offset-md-2">
+        <div class="accordion" id="faq">
+            <div v-for="(faq, index) in faqs" class="card">
+                <div class="card-header" :id="'heading' + index">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" :data-target="'#collapse' + index" aria-expanded="true" aria-controls="collapseOne">
+                            {{ faq.question }}
+                        </button>
+                    </h5>
+                </div>
+
+                <div :id="'collapse' + index" class="collapse" :class="{ show: index === 0 }" :aria-labelledby="'heading' + index" data-parent="#faq">
+                    <div class="card-body">
+                        <h3 class="text-center" :class="[ faq.answer ? 'text-success' : 'text-danger' ]">{{ faq.answerHeading }}</h3>
+                        <div v-html="faq.answerBody"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="my-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2018 <a href="/d14na.bit">D14na</a> MDAO</p>
+
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/d14na.bit/privacy.html">Privacy</a></li>
+                &bullet;&nbsp;
+                <li class="list-inline-item"><a href="/d14na.bit/terms.html">Terms</a></li>
+                &bullet;&nbsp;
+                <li class="list-inline-item"><a href="/d14na.bit/support.html">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+const app = new Vue({
+    el: '#app',
+    data: {
+        tagLine: `Zer0̸net Private Enterprise Network`,
+        faqs: [
+            {
+                question: `Is 0̸PEN The Same As Any Other VPN Provider?`,
+                answer: false,
+                answerHeading: `NO, IT'S NOT!`,
+                answerBody: `
+                    0̸PEN's communication network is restricted to <strong>ONLY the Zer0̸net</strong> and authorized P2P gateways like <strong>BitTorrent, TOR and I2P.</strong>
+                    This <strong>GUARANTEES</strong> that <strong>ALL</strong> communications are handled by military-grade encryption and it remains <strong>100% impossible</strong> to be tampered with by the powers of the
+                    <a href="https://en.wikipedia.org/wiki/National_Security_Agency">NSA</a>,
+                    <a href="https://en.wikipedia.org/wiki/Government_Communications_Headquarters">GCHQ</a>,
+                    <a href="https://en.wikipedia.org/wiki/Special_Communications_Service_of_Russia">Spetssvyaz</a>,
+                    <a href="https://en.wikipedia.org/wiki/Fourth_Department_of_the_General_Staff_Headquarters_Department">4PLA</a>,
+                    or any other <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MITM</a> attackers.
+                `
+            },
+            {
+                question: `Does This Network Work With .Torrent Files & Magnet Links?`,
+                answer: true,
+                answerHeading: `YES, OF COURSE!`,
+                answerBody: `
+                0̸PEN's communication network is <strong>"OPTIMZED"</strong> to handle <em>streaming</em> torrents.
+                And when connected to a <a href="/supeer.bit">SUPeer,</a> media streaming and file download speeds often <strong>EXCEED</strong> what's available through even the TOP BitTorrent clients.
+                `
+            },
+            {
+                question: `Will Everything On The Zer0̸net Be Accessible?`,
+                answer: false,
+                answerHeading: `NO, IT WON'T!`,
+                answerBody: `
+                0̸PEN's communication network is systematically governed by <a href="/zerofilters.bit">Zer0̸Filters' Smart Contracts;</a> which liberally limits filtering to <strong>*ONLY</strong> the following 4 categories:
+
+                <br /><br />
+
+                <ol>
+                    <li>Child Abuse &amp; Exploitation</li>
+                    <li>Hate &amp; Harassment</li>
+                    <li>Terrorism</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Revenge_porn">Revenge Porn</a></li>
+                </ol>
+
+                <small class="text-muted"><em>* Additional geo-filtering may apply in some regions to comply with local laws.</em></small>
+                `
+            },
+            {
+                question: `Do You Record and/or Report ANY User Activity?`,
+                answer: false,
+                answerHeading: `NO, WE CAN'T!`,
+                answerBody: `
+                <strong>YOUR PRIVACY IS EVERYTHING TO US!</strong>
+                There are <strong>NO</strong> user logs stored on <strong>ANY</strong> server within or outside of our network.
+                We may <em>"temporarily"</em> record error logs for events related to <a href="https://en.wikipedia.org/wiki/Exception_handling">exception handling,</a> which have been specially sanitized to <strong>EXCLUDE ALL</strong> user and privacy data.
+                `
+            },
+            {
+                question: `How Do You Handle DMCA (Content Take-down) Notices?`,
+                answer: false,
+                answerHeading: `WE DON'T!`,
+                answerBody: `
+                0̸PEN is <u>strictly</u> a communications network and <strong>DOES NOT</strong> store <strong>ANY</strong> user-provided data on its servers.
+                DMCA-like notices <strong>DO NOT</strong> apply to our network.
+                There is therefore <strong>NO</strong> external influence applied at <strong>ANY</strong> level within our managed infrastructure.
+                `
+            },
+            {
+                question: `My Favorite Zite Doesn't Work! What Can I Do?`,
+                answer: true,
+                answerHeading: `LET US KNOW!`,
+                answerBody: `
+                Unfortunately, many of the current zites still have files that are connecting to the <strong>"Insecure" Clearnet/Internet.</strong>
+                We are continuously improving the safety and security of the Zer0̸net community by <strong>routing "commonly shared" content</strong> <em>(eg. JavaScript libraries, Web fonts, Icon galleries, etc)</em> to the <a href="/zerocdn.bit">Zer0̸net's Secure CDN.</a>
+                No action has to be taken on your part after the update is made, and your favorite zite will once again be available to you and all of your peers :p
+
+                <br /><br />
+
+                Contact us at <strong><a href="mailto:support@d14na.org">support@d14na.org.</a></strong>
+                `
+            }
+        ]
+    }
+})
+</script>
+
+</body>
+</html>
