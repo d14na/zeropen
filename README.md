@@ -1,3 +1,1 @@
-# Zeronet Private Enterprise Network (0̸PEN)
-
-Zeronet's Private Enterprise Network provides HODLREs with the highest bandwidth over a military-grade communications network.
+# Zero Private Enterprise Network (0̸PEN)
